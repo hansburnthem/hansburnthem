@@ -1,9 +1,26 @@
 // Navbar
-$(window).on("scroll", function() {
-	var pos = $(window).scrollTop();
-	if(pos < 400) $("#sticky-header").removeClass("sticky");
-	else $("#sticky-header").addClass("sticky");
-})
+var header = document.getElementById("sticky-header");
+var list = document.getElementById("item-color");
+var bar = document.getElementsByClassName("bar-color");
+var stickyx = header.offsetTop;
+
+window.onscroll = function() {
+	if (window.pageYOffset > stickyx) {
+		header.classList.add("sticky");
+		list.style.color = "Black";
+		var i;
+		for (i = 0; i < bar.length; i++) {
+			bar[i].style.backgroundColor = "black";
+		}
+	  } else {
+		header.classList.remove("sticky");
+		list.style.color = "White";
+		var i;
+		for (i = 0; i < bar.length; i++) {
+			bar[i].style.backgroundColor = "white";
+		}
+	  }
+};
 
 // Hamburger Menu
 $(".dropdown-btn").on("click", function() {
