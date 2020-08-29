@@ -47,6 +47,10 @@ a {
     margin-right: auto;
 }
 
+.bar-overlay {
+    padding: 4.59375rem 0;
+}
+
 /* header */
 .header-container {
     top: 0;
@@ -210,8 +214,11 @@ a {
     display: block;
     margin: auto;
     width: 100%;
-    max-width: 585px;
     height: auto;
+}
+
+.post-img img {
+    max-width: 585px;
 }
 
 .post-desc {
@@ -259,7 +266,9 @@ a {
 }
 
 .post-footer {
+    font-family: Product-Bold;
     font-size: .8rem;
+    /* color: red; */
 }
 
 @media (max-width: 1100px) {

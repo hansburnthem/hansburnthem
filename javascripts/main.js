@@ -1,10 +1,26 @@
-// Navbar
+
 var header = document.getElementById("sticky-header");
 var list = document.getElementById("item-color");
 var bar = document.getElementsByClassName("bar-color");
 var logo = document.getElementById("logo-img");
 var stickyx = header.offsetTop;
+var auto = document.getElementsByClassName("auto-odd");
+// err
+// var slides = document.getElementsByClassName("mySlides");
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
+// Automatic Reverse-Post in Odd Number
+window.onload = function() {	
+	for (let index = 0; index < auto.length; index++) {
+		auto[index].classList.add("post-container");
+		if(index % 2 != 0) {
+			auto[index].classList.add("reverse-post");
+		}
+	}
+}
+
+// Navbar
 window.onscroll = function() {
 	if (window.pageYOffset > stickyx) {
 		header.classList.add("sticky");
@@ -37,3 +53,22 @@ $(window).on("click", function(e) {
 		$(".dropdown-menu").removeClass("show");
 	}
 })
+
+// err
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+//   var i;
+//   if (n > slides.length) {slideIndex = 1}    
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";  
+//   }
+//   slides[slideIndex-1].style.display = "block";  
+// }
