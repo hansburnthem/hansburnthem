@@ -13,7 +13,7 @@ window.onscroll = function() {
 		for (i = 0; i < bar.length; i++) {
 			bar[i].style.backgroundColor = "black";
 		}
-		logo.src = "_assets/logo/logo-black.png"
+		logo.src = "assets/logo/logo-black.png"
 	  } else {
 		header.classList.remove("sticky");
 		list.style.color = "White";
@@ -21,7 +21,7 @@ window.onscroll = function() {
 		for (i = 0; i < bar.length; i++) {
 			bar[i].style.backgroundColor = "white";
 		}
-		logo.src = "_assets/logo/logo.png"
+		logo.src = "assets/logo/logo.png"
 	  }
 };
 

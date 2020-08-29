@@ -1,19 +1,19 @@
 /* Import Fonts */
 @font-face {
     font-family: Product-Regular;
-    src: url(_assets/fonts/Product-Sans-Regular.ttf);
+    src: url(assets/fonts/Product-Sans-Regular.ttf);
 }
 @font-face {
     font-family: Product-Italic;
-    src: url(_assets/fonts/Product-Sans-Italic.ttf);
+    src: url(assets/fonts/Product-Sans-Italic.ttf);
 }
 @font-face {
     font-family: Product-Bold;
-    src: url(_assets/fonts/Product-Sans-Bold.ttf);
+    src: url(assets/fonts/Product-Sans-Bold.ttf);
 }
 @font-face {
     font-family: Product-Bold-Italic;
-    src: url(_assets/fonts/Product-Sans-Bold-Italic.ttf);
+    src: url(assets/fonts/Product-Sans-Bold-Italic.ttf);
 }
 
 /* base default */
