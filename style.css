@@ -213,13 +213,40 @@ a {
 .post-img {
     display: block;
     margin: auto;
-    width: 100%;
-    height: auto;
 }
 
 .post-img img {
     max-width: 585px;
+    height: auto;
 }
+
+.slide-btn {
+    text-align: center;
+    /* box-sizing: border-box; */
+}
+
+.slide-btn a {
+    font-family: Product-Bold;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    margin: 0 1rem;
+    background: transparent;
+    cursor: pointer;
+    /* border: 1px solid white; */
+    /* border-radius: 10px; */
+    color: white;   
+}
+
+.slide-btn a:hover {
+    color: red;
+    transition: .5s;
+}
+
+/* DELETE DARI SINI */
+
+
+
+/* SAMPE SINI */
 
 .post-desc {
     font-family: Product-Regular;
@@ -241,8 +268,8 @@ a {
 
 .flag-img {
     padding-top: 1rem;
-    width: 65px;
-    /* height: 65px; */
+    width: auto;
+    height: auto;
     /* box-shadow: 0 .5rem 10rem .2rem white; */
 }
 
@@ -253,6 +280,7 @@ a {
 .post-title {
     font-size: 2rem;
     margin-block-end: 0;
+    text-align: left;
 }
 
 .post-country {

@@ -5,13 +5,18 @@ var bar = document.getElementsByClassName("bar-color");
 var logo = document.getElementById("logo-img");
 var stickyx = header.offsetTop;
 var auto = document.getElementsByClassName("auto-odd");
-// err
-// var slides = document.getElementsByClassName("mySlides");
-// var slideIndex = 1;
-// showSlides(slideIndex);
+// iniliasisasi variable slide image
+// slideIndex = total berapa slideshow jika 3 [1,1,1]
+var slideIndex = [1,1];
+// sildeId = nampung nama class yang dipake slideshow
+var slideId = ["Slides1", "Slides2"]
+
 
 // Automatic Reverse-Post in Odd Number
 window.onload = function() {	
+	// inisialisasi selalu depannya 1 dan no index yang terdapat di slideIndex [1, x]
+	showSlides(1, 0);
+	showSlides(1, 1);
 	for (let index = 0; index < auto.length; index++) {
 		auto[index].classList.add("post-container");
 		if(index % 2 != 0) {
@@ -54,21 +59,18 @@ $(window).on("click", function(e) {
 	}
 })
 
-// err
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
+// Image Slider
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
 
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   var i;
-//   if (n > slides.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";  
-//   }
-//   slides[slideIndex-1].style.display = "block";  
-// }
+function showSlides(n, no) {
+  var i;
+  var slides = document.getElementsByClassName(slideId[no]);
+  if (n > slides.length) {slideIndex[no] = 1}   
+  if (n < 1) {slideIndex[no] = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex[no]-1].style.display = "block";  
+}
