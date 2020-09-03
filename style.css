@@ -27,6 +27,10 @@ a {
     text-decoration: none !important;
 }
 
+.active {
+    color: red !important;
+}
+
 .show {
     display: block !important;
 }
@@ -184,7 +188,7 @@ a {
     top: 4rem;
     position: absolute;
     background-color: white;
-    color: black;
+    color: black; 
     border-radius: 0 0 1.5rem 1.5rem;
     z-index: 1;
 }
@@ -271,12 +275,6 @@ a {
     transition: .5s;
 }
 
-/* DELETE DARI SINI */
-
-
-
-/* SAMPE SINI */
-
 .post-desc {
     font-family: Product-Regular;
     color: white;
@@ -328,16 +326,154 @@ a {
     /* color: red; */
 }
 
-@media (max-width: 1100px) {
-    .post-container {
-        flex-wrap: wrap;
-    }
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
 
-    .post-container {
+.left-foot {
+    width: 100%;
+    /* background: red; */
+}
+
+.center-foot {
+    font-family: Product-Bold;
+    font-size: 1rem;
+    text-align: center;
+    padding: .5rem;
+    color: black;
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+    max-width: 100%;
+}
+
+.right-foot {
+    width: 100%;
+    /* background: blue; */
+}
+
+/* about-me page */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5rem;
+}
+
+.about-img {
+    display: block;
+    margin: auto;
+}
+
+.about-img img {
+    max-width: 585px;
+    height: auto;
+    border-radius: 2rem;
+}
+
+.about-desc {
+    font-family: Product-Regular;
+    color: white;
+    text-align: justify;
+    padding: 1rem 5rem;
+    margin: auto 0;
+}
+
+.about-title {
+    font-family: Product-Bold;
+    font-size: 2rem;
+    margin-block-end: 0;
+    text-align: left;
+}
+
+.about-par {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Contact page */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5rem;
+}
+
+.contact-form {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-name {
+    font-family: Product-Bold;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+::placeholder {
+    font-family: Product-Regular;
+    font-size: .8rem;
+    color: black;
+    opacity: 50%;
+}
+
+.box-msg, .box-subject {
+    font-family: Product-Regular;
+    font-size: .8rem;
+    color: black;
+    margin: .5rem auto;
+    background: white;
+    color: black;
+    width: 40%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.box-submit {
+    margin: .5rem auto;
+    width: 15%;
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    background: white;
+    font-family: Product-Regular;
+    font-size: .8rem;
+    color: black;
+}
+
+.socmed {
+    width: 100%;
+    margin: auto;
+    padding: 1rem 5rem;
+}
+
+.socmed-container {
+    flex-direction: row;
+}
+
+.socmed-container img {
+    max-width: 40px;
+    height: auto;
+    margin: .5rem .5rem 0 0;
+}
+
+@media (max-width: 1100px) {
+    .post-container, .about-container, .contact-container {
+        flex-wrap: wrap;
         padding: 0;
     }
 
-    .post-desc {
+    .socmed {
+        text-align: center;
+    }
+
+    .post-desc, .about-desc {
         padding: 1rem 5rem 5rem 5rem
     }
 }
@@ -359,6 +495,11 @@ a {
     } */
 
     .post-img img {
+        max-width: 500px;
+        height: auto;
+    }
+
+    .about-img img {
         max-width: 500px;
         height: auto;
     }
@@ -390,7 +531,7 @@ a {
         font-size: .8rem;
     }
 
-    .post-desc {
+    .post-desc, .about-desc {
         padding: 1rem 4rem 2rem 4rem;
     }
 
@@ -398,15 +539,25 @@ a {
         max-width: 350px;
         height: auto;
     }
+
+    .about-img img {
+        max-width: 350px;
+        height: auto;
+    }
 }
 
 /* iPhone X/6/7/8 */
 @media (max-width: 375px) {
-    .post-desc {
+    .post-desc, .about-desc {
         padding: 1rem 3rem 2rem 3rem;
     }
 
     .post-img img {
+        max-width: 320px;
+        height: auto;
+    }
+
+    .about-img img {
         max-width: 320px;
         height: auto;
     }
@@ -429,11 +580,16 @@ a {
         right: 1.73rem;
     }
 
-    .post-desc {
+    .post-desc, .about-desc {
         padding: 1rem 2rem 2rem 2rem;
     }
 
     .post-img img {
+        max-width: 290px;
+        height: auto;
+    }
+
+    .about-img img {
         max-width: 290px;
         height: auto;
     }
