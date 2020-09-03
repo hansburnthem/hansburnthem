@@ -57,17 +57,18 @@
     </div>
     <div class="contact-container">
         <div class="contact-form">
-            <form action="mailto:hnifrma@gmail.com" method="get" enctype="text/plain">
+            <form action="https://mailthis.to/hansburnthem" method="POST" enctype="multipart/form-data">
                 <div class="title-name">
                     Email Me
                 </div>
                 <div class="form-container">
-                    <!-- <label for="subject" class="name-form">Message</label> -->
-                    <input id="subject" name="subject" placeholder="Subject" class="box-subject"></input>
+                    <input id="email" name="_replyto" placeholder="Your Email" class="box-subject"></input>
                 </div>
                 <div class="form-container">
-                    <!-- <label for="subject" class="name-form">Message</label> -->
-                    <textarea id="body" name="body" placeholder="Message" class="box-msg" style="height: 10rem;"></textarea>
+                    <input id="subject" name="_subject" placeholder="Subject" class="box-subject"></input>
+                </div>
+                <div class="form-container">
+                    <textarea id="body" name="message" placeholder="Message" class="box-msg" style="height: 10rem;"></textarea>
                 </div>
                 <div class="form-container">
                     <input type="submit" value="Send" class="box-submit">
