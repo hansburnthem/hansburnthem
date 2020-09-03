@@ -5,6 +5,7 @@ var bar = document.getElementsByClassName("bar-color");
 var logo = document.getElementById("logo-img");
 var stickyx = header.offsetTop;
 var auto = document.getElementsByClassName("auto-odd");
+var menu = document.getElementById("men-status");
 // iniliasisasi variable slide image
 // slideIndex = total berapa slideshow jika 3 [1,1,1]
 var slideIndex = [1,1];
@@ -34,7 +35,9 @@ window.onscroll = function() {
 		for (i = 0; i < bar.length; i++) {
 			bar[i].style.backgroundColor = "black";
 		}
-		logo.src = "assets/logo/logo-black.png"
+		logo.src = "assets/logo/logo-black.png";
+		menu.classList.remove("dropdown-menu");
+		menu.classList.add("dropdown-menu-nav");
 	  } else {
 		header.classList.remove("sticky");
 		list.style.color = "White";
@@ -43,21 +46,34 @@ window.onscroll = function() {
 			bar[i].style.backgroundColor = "white";
 		}
 		logo.src = "assets/logo/logo.png"
+		menu.classList.remove("dropdown-menu-nav");
+		menu.classList.add("dropdown-menu");
 	  }
 };
 
 // Hamburger Menu
-$(".dropdown-btn").on("click", function() {
-	var menu = $(".dropdown-menu");
-	if(menu.hasClass("show")) menu.removeClass("show");
-	else menu.addClass("show")
-})
+// window.onclick = function(e) {
+// 	if(!e.classList.contains("dropdown-button")) {
+// 		document.getElementById("men-status").classList.remove("show");
+// 	}
+// }
 
-$(window).on("click", function(e) {
-	if(!e.target.matches(".dropdown-button") && !e.target.matches(".bar1") && !e.target.matches(".bar2") && !e.target.matches(".bar3")) {
-		$(".dropdown-menu").removeClass("show");
-	}
-})
+function hamburgermenu () {
+	if(menu.classList.contains("show")) menu.classList.remove("show");
+	else menu.classList.add("show");
+};
+
+// $(".dropdown-btn").on("click", function() {
+// 	var menu = $(".dropdown-menu");
+// 	if(menu.hasClass("show")) menu.removeClass("show");
+// 	else menu.addClass("show")
+// })
+
+// $(window).on("click", function(e) {
+// 	if(!e.target.matches(".dropdown-button") && !e.target.matches(".bar1") && !e.target.matches(".bar2") && !e.target.matches(".bar3")) {
+// 		$(".dropdown-menu").removeClass("show");
+// 	}
+// })
 
 // Image Slider
 function plusSlides(n, no) {
