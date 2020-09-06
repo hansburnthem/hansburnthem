@@ -537,7 +537,7 @@ a {
     }
 }
 
-@media (max-width: 845px) {
+@media (max-width: 920px) {
     .menu {
 		display: none;
 	}
