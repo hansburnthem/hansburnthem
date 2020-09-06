@@ -6,6 +6,7 @@ var logo = document.getElementById("logo-img");
 var stickyx = header.offsetTop;
 var auto = document.getElementsByClassName("auto-odd");
 var menu = document.getElementById("men-status");
+var seperate = document.getElementsByClassName("seperate-container");
 // iniliasisasi variable slide image
 // slideIndex = total berapa slideshow jika 3 [1,1,1]
 var slideIndex = [1,1];
@@ -23,6 +24,7 @@ window.onload = function() {
 		if(index % 2 != 0) {
 			auto[index].classList.add("reverse-post");
 		}
+		seperate[index].classList.add("show-flex");
 	}
 }
 

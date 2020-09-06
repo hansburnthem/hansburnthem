@@ -6,23 +6,26 @@ var logo = document.getElementById("logo-img");
 var stickyx = header.offsetTop;
 var auto = document.getElementsByClassName("auto-odd");
 var menu = document.getElementById("men-status");
+var seperate = document.getElementsByClassName("seperate-container");
 // iniliasisasi variable slide image
 // slideIndex = total berapa slideshow jika 3 [1,1,1]
-var slideIndex = [1,1];
+// var slideIndex = [1,1]; XXX
 // sildeId = nampung nama class yang dipake slideshow
-var slideId = ["Slides1", "Slides2"]
+// var slideId = ["Slides1", "Slides2"] XXX
 
 
 // Automatic Reverse-Post in Odd Number
 window.onload = function() {	
 	// inisialisasi selalu depannya 1 dan no index yang terdapat di slideIndex [1, x]
-	showSlides(1, 0);
-	showSlides(1, 1);
+	// showSlides(1, 0); XXX
+	// showSlides(1, 1); XXX
+
 	for (let index = 0; index < auto.length; index++) {
-		auto[index].classList.add("post-container");
+		auto[index].classList.add("certif-container");
 		if(index % 2 != 0) {
 			auto[index].classList.add("reverse-post");
 		}
+		seperate[index].classList.add("show-flex");
 	}
 }
 
