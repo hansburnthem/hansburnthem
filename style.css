@@ -409,6 +409,11 @@ a {
     margin-top: 1rem;
 }
 
+.about-par a:hover {
+    color: red;
+    transition: .5s;
+}
+
 /* Certif Page */
 .certif-container {
     display: flex;
