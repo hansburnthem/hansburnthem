@@ -100,7 +100,7 @@
                 document.getElementById("body").classList.add("bg-gray-100","text-gray-800");
                 document.getElementById("socmed-light").classList.replace("hidden","flex");
                 document.getElementById("header").classList.add("text-yellow-500");
-                document.getElementById("themes").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" onclick="changeThemes(\'dark\')" class="ml-auto p-1 h-9 w-9 text-yellow-200 rounded-xl bg-blue-900 xl:bg-white xl:text-black xl:hover:bg-blue-900 xl:hover:text-yellow-200 ease-in duration-200 cursor-pointer" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg>';
+                document.getElementById("themes").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" onclick="changeThemes(\'dark\')" class="ml-auto p-1 h-9 w-9 text-yellow-200 rounded-xl bg-blue-900 xl:bg-gray-100 xl:text-black xl:hover:bg-blue-900 xl:hover:text-yellow-200 ease-in duration-200 cursor-pointer" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg>';
             } else {
                 if (localStorage.getItem("theme") !== null) localStorage.setItem("theme","dark");
                 document.getElementById("body").classList.add("bg-gray-800","text-white");
