@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script defer src="https://unpkg.com/alpinejs@3.2.1/dist/cdn.min.js"></script>
+</head>
+<body x-data>
+    <button @click="alert('asdasd')">Increment</button>
+    <button x-init="console.log('Im initing')"></button>
+    <div x-data="{ count: 0 }">
+        
+    
+        <span x-text="count"></span>
+    </div>
+
+    <div x-data="{ open: false, toggle(){ this.open = ! this.open } }">
+        <button @click="toggle()">Toggle Content</button>
+    
+        <div x-show="open">
+            Content...
+        </div>
+    </div>
+    <br>
+    <div x-data="{ open: false }">
+        <button x-on:click="open = !open">test</button>
+
+        <div x-show="open">
+            asdasd
+        </div>
+    </div>
+
+    <div x-data="{ open: false }">
+        <button x-on:click="open = ! open">Toggle Dropdown</button>
+    
+        <div x-show="open">
+            Dropdown Contents...
+        </div>
+    </div>
+
+    <div x-data="{ open: false }">
+        <button x-on:click="open = ! open">Toggle Dropdown</button>
+      
+        <div :class="open ? '' : 'hidden'">
+          Dropdown Contents...
+        </div>
+      </div>
+</body>
+</html>
