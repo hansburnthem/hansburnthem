@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanif Zhaky</title>
-    <link rel="icon" type="image/png" href="/assets/logo/zk-ico-white.png"/>
-    <link href="/css/index.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/logo/zk-ico-white.png"/>
+    <link href="./css/index.css" rel="stylesheet">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="/javascripts/index.js"></script>
+    <script defer src="./javascripts/index.js"></script>
 </head>
 <body class="tw-bg-gray-200 dark:tw-bg-gray-900">
     <div x-data="{
         test: false
     }" @keyup.slash.window="test = !test">
         <div x-cloak x-show="test" class="tw-absolute tw-h-[80px] tw-w-screen tw-bg-gray-900 dark:tw-bg-gray-200 tw-rounded-b-3xl tw-px-10 tw-flex tw-items-center tw-justify-between tw-overflow-hidden">
-            <img src="/assets/logo/zhaky-semibold-white.png" class="tw-w-[120px]">
+            <img src="./assets/logo/zhaky-semibold-white.png" class="tw-w-[120px]">
             <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-9 tw-w-9 tw-text-white dark:tw-text-gray-900 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
         </div>
         <div x-cloak x-show="!test" class="tw-w-screen tw-p-10 tw-flex tw-items-center tw-justify-between">
-            <img src="/assets/logo/zhaky-semibold-black.png" class="tw-w-[120px]">
+            <img src="./assets/logo/zhaky-semibold-black.png" class="tw-w-[120px]">
             <div class="tw-relative" x-data="{
                 init() {
-                    fetch('/json/menu.json')
+                    fetch('./json/menu.json')
                         .then((response) => response.json())
                         .then((json) => this.menus = json.menus)
                 },
