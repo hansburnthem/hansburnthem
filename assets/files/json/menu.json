@@ -1,0 +1,24 @@
+{
+    "menus": [
+        {
+            "name": "hlog",
+            "url": "#"
+        },
+        {
+            "name": "project",
+            "url": "#"
+        },
+        {
+            "name": "about-me",
+            "url": "#"
+        },
+        {
+            "name": "certificate",
+            "url": "#"
+        },
+        {
+            "name": "contact",
+            "url": "#"
+        }
+    ]
+}
