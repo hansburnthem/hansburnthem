@@ -1,4 +1,3 @@
-
 var header = document.getElementById("sticky-header");
 var list = document.getElementById("item-color");
 var bar = document.getElementsByClassName("bar-color");
