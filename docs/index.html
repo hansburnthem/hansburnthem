@@ -24,7 +24,7 @@
             <img src="/assets/logo/zhaky-semibold-black.png" class="tw-w-[120px]">
             <div class="tw-relative" x-data="{
                 init() {
-                    fetch('/public/json/menu.json')
+                    fetch('/json/menu.json')
                         .then((response) => response.json())
                         .then((json) => this.menus = json.menus)
                 },
